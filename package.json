@@ -1,12 +1,16 @@
 {
   "name": "@honestfigs/ui",
   "version": "1.0.0",
-  "description": "",
+  "description": "the styles for the honest figs project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "front end",
+    "css"
+  ],
   "author": "Cristen Jones",
-  "license": "GPL-3.0-or-later"
+  "license": "GPL-3.0-or-later",
+  "repository": "honest-figs/ui"
 }

@@ -1,6 +1,6 @@
 {
   "name": "@honestfigs/ui",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "the styles for the honest figs project",
   "main": "index.js",
   "scripts": {

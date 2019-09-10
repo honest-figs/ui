@@ -1,0 +1,256 @@
+// code[class*="language-"],
+// pre[class*="language-"] {
+//     font-family: $mono-font-family;
+//     font-weight: 500;
+// }
+
+html {
+    font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-feature-settings: 'tnum' 1, 'dlig' 1, 'zero' 1, 'frac' 1, 'cpsp' 1, 'ss01' 1, 'ss02' 1;
+    line-height: 1.4;
+}
+
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+}
+
+body {
+    counter-reset: table-counter;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: .5em;
+    margin-top: 0;
+}
+
+a {
+    color: $oc-cyan-7;
+
+    &:hover {
+        color: $oc-cyan-9;
+    }
+}
+
+a,
+ins,
+u {
+  text-decoration-skip: ink edges;
+}
+
+del {
+    color: $oc-gray-5;
+}
+
+blockquote {
+    border-left: 2px $oc-teal-2 solid;
+    margin-left: 0;
+    padding: 1em 2em;
+}
+
+fieldset {
+    border: 2px $oc-grape-2 dotted;
+
+    legend {
+        color: $oc-grape-5;
+        padding: 0 0.25rem;
+        font-weight: 700;
+        font-size: small;
+    }
+}
+
+label {
+    font-weight: 500;
+}
+
+hr {
+    border: 1px $oc-teal-2 solid;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+  text-decoration: none;
+}
+
+code:not([class]), pre, kbd, samp, var {
+    background: $oc-pink-0;
+    border: 1px $oc-pink-1 solid;
+    color: $oc-violet-6;
+    border-radius: 0.25em;
+    line-height: 1.2;
+    padding: .1rem .2rem;
+    font-family: "Overpass Mono","SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
+    font-feature-settings: 'frac' 0;
+    font-size: 94%;
+}
+
+code[class] {
+    font-family: "Overpass Mono","SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
+    font-feature-settings: 'frac' 0;
+    font-size: 94%;
+    line-height: 1.2;
+}
+
+mark {
+    background-color: $oc-yellow-1;
+}
+
+input, textarea {
+    border: 1px $oc-gray-4 solid;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    font-size: 1rem;
+    padding: 0.25rem;
+    color: $oc-violet-6;
+}
+
+select {
+    border: 1px $oc-gray-4 solid;
+    // height: 1.2rem;
+    // line-height: 1.2rem;
+    font-size: 1rem;
+    padding: 0.25rem;
+    color: $oc-violet-6;
+}
+
+button, input[type="submit"], input[type="reset"], input[type="button"] {
+    font-size: unset;
+    height: unset;
+    font-variant: all-small-caps;
+    font-weight: 700;
+    color: $oc-gray-9;
+    background-color: $oc-gray-1;
+    border: 1px $oc-gray-4 solid;
+    border-radius: 0.4em;
+    padding: 0.15em 0.45em;
+
+    &:hover {
+        background-color: $oc-gray-3;
+        border-color: $oc-gray-5;
+    }
+}
+
+sub { font-feature-settings: "subs"; }
+sup { font-feature-settings: "sups"; }
+
+sub, sup {
+    font-size: 95%;
+    position: initial;
+}
+
+ul {
+    list-style: none;
+
+    li {
+        margin: 0.25rem;
+        &::before {
+            content: "";
+            background-color: $oc-indigo-0;
+            border: 0.05em $oc-indigo-1 solid;
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            display: inline-block;
+            line-height: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        li {
+            
+            &::before {
+                background-color: $oc-indigo-1;
+                border-color: $oc-indigo-2;
+            }
+
+            li::before {
+                background-color: $oc-indigo-2;
+                border-color: $oc-indigo-3;
+            }
+        }
+    }
+}
+
+ol {
+    list-style: none;
+    counter-reset: ol-counter;
+
+    li {
+        counter-increment: ol-counter;
+        margin: 0.25rem;
+        &::before {
+            content: counter(ol-counter);
+            color: $oc-indigo-7;
+            border: 0.05em $oc-indigo-1 solid;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            display: inline-block;
+            line-height: 1rem;
+            background-color: $oc-indigo-0;
+            font-size: 0.75em;
+            font-weight: 700;
+            text-align: center;
+            margin-right: 0.5rem;
+        }
+
+        li {
+            &::before {
+                color: $oc-indigo-8;
+                background-color: $oc-indigo-1;
+                border-color: $oc-indigo-2;
+            }
+
+            li::before {
+                color: $oc-indigo-9;
+                background-color: $oc-indigo-2;
+                border-color: $oc-indigo-3;
+            }
+        }
+    }
+}
+
+dl dt {
+    font-weight: 700;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0.5rem;
+    font-size: small;
+    counter-increment: table-counter;
+
+    td, th {
+        padding: 0 0.25rem;
+    }
+
+    tr:hover {
+        background-color: $oc-yellow-0;
+    }
+
+    caption {
+        font-weight: 700;
+        text-align: left;
+        margin: 0 0.5rem;
+
+        &::before {
+            content: "Table "counter(table-counter, upper-roman)". ";
+        }
+    }
+}
+
+thead th, 
+thead td,
+tfoot th, 
+tfoot td {
+    background-color: $oc-yellow-0;
+    border: 1px $oc-yellow-2 solid;
+    border-radius: 0.25rem;
+    color: $oc-yellow-9;
+}
+tbody th {
+    color: $oc-yellow-7;
+    font-size: small;
+}

@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Page</title>
+  <link href="dist/prism.css" rel="stylesheet" />
+  <link href="dist/honestfigs.min.css" rel="stylesheet" />
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <script type="text/javascript" src="dist/prism.js"></script>
+</head>
+
+<body>
+  <header role="banner">
+    <h1>HTML5 Kitchen Sink</h1>
+    <small>Jump to: <a href="#headings">Headings</a> | <a href="#sections">Sections</a> | <a href="#phrasing">Phrasing</a> | <a href="#palpable">Palpable Content</a> | <a href="#embeds">Embeds</a> | <a href="#forms">Forms</a> | <a href="#tables">Tables</a> </small>    <br><br>
+    <p>This section seves as the <code>header</code>.</p>
+
+  </header>
+
+  <main>
+    <section id="headings">
+      <h3><a href="#headings">#</a> Headings </h3>
+      <p>Elements <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>,
+        <code>h5</code>, <code>h6</code> make up the <em>heading content</em> category.
+      </p>
+      <hgroup>
+        <h1>h1 I am most important.</h1>
+        <h2>h2 Back in my quaint <a href='#'>garden</a></h2>
+        <h3>h3 Jaunty <a href='#'>zinnias</a> vie with flaunting phlox.</h3>
+        <h4>h4 Five or six big jet planes zoomed quickly by the new tower.</h4>
+        <h5>h5 Expect skilled signwriters to use many jazzy, quaint old alphabets effectively.</h5>
+        <h6>h6 Pack my box with five dozen liquor jugs.</h6>
+      </hgroup>
+      <footer>
+        <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#heading-content">Heading
+              Content spec.</a></p>
+        <p>Note: these two paragraphs are contained in a <code>footer</code> element.
+        </p>
+      </footer>
+    </section>
+    <hr>
+    <section id="sections">
+      <header>
+        <h3><a href="#sections">#</a> Sections</h3>
+        <p>Elements <code>article</code>, <code>aside</code>, <code>nav</code>,
+          <code>section</code> make up the <em>sectioning content</em> category.
+        </p>
+        <nav>
+          <p>These links are contained in a <code>nav</code> element.</p>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <article>
+        <p>This paragraph is nested inside an <code>article</code> element. It contains many different, sometimes useful, <a href="http://www.w3schools.com/tags/">HTML5 elements</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>,
+          and <small>small</small> but there are many others as well. Hover the following text for abbreviation element: <abbr title="abbreviation">abbr</abbr>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins>          text.</p>
+        <p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> elements. Even more specifically, there is an element just for <var>variables</var>. Not to be mistaken with block
+          quotes below, the quote element lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) elements.</p>
+        <section>
+          <p>This paragraph is contained in a <code>section</code> element of its parent <code>article</code> element.</p>
+          <p>↓ The following paragraph has the <code>hidden</code> attribute and should not be displayed. ↓</p>
+          <p hidden>→ You should not see this paragraph. ←</p>
+          <p>↑ The previous paragraph should not be displayed. ↑</p>
+        </section>
+      </article>
+      <aside>
+        <p>This is contained in an <code>aside</code> element.</p>
+      </aside>
+      <footer>
+        <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#sectioning-content">Sectioning
+              Content spec.</a></p>
+      </footer>
+    </section>
+    <hr>
+    <section id="phrasing">
+      <header>
+        <h3><a href="#phrasing">#</a> Phrasing</h3>
+        <p>Elements <code>abbr</code>, <code>b</code>, <code>bdi</code>,
+          <code>bdo</code>, <code>br</code>, <code>cite</code>, <code>code</code>,
+          <code>data</code>, <code>del</code>, <code>dfn</code>, <code>em</code>,
+          <code>i</code>, <code>ins</code>, <code>kbd</code>, <code>mark</code>,
+          <code>meter</code>, <code>progress</code>, <code>q</code>, <code>s</code>,
+          <code>samp</code>, <code>small</code>, <code>span</code>, <code>strong</code>,
+          <code>sub</code>, <code>sup</code>, <code>time</code>, <code>u</code>,
+          <code>var</code>, <code>wbr</code>, and others make up the <em>phrasing
+              content</em> category.
+        </p>
+      </header>
+      <p><code>abbr</code>: Some vehicles meet the
+        <abbr title="Super Ultra Low Emission Vehicle">SULEV</abbr> standard.<br>
+        <code>br</code> was used to make this sentence start on a new line.</p>
+      <p><code>bdi</code>: Some languages read right to left, <bdi lang="ar">مرحبا</bdi>.
+        <code>bdo</code>: <bdo dir="rtl">The normal direction has been
+            overridden.</bdo></p>
+      <p><code>em</code> is used for <em>emphasis</em> and usually renders as italics, contrast that with <code>i</code> which is used for alternate voice or to offset from the normal (such as a phrase from a different language or taxonomic designation):
+        <i>E. coli</i> can be bad. <code>strong</code> is used for <strong>importance or urgency</strong> and usually renders as bold, contrast that with <code>b</code> which is used to <b>draw
+            attention</b> without the semantic meaning of importance.</p>
+      <p><code>cite</code>: In the words of <cite>Charles Bukowski</cite> —
+        <q>An intellectual says a simple thing in a hard way. An artist says a
+            hard thing in a simple way.</q></p>
+      <p><code>data</code> can be used to specify <data value="2018-09-24T05:00-07:00">5 A.M.</data> that is machine-readable, but <code>time</code> is a better choice for specifying <time datetime="2018-09-24T05:00-07:00">5 A.M.</time> in a machine-readable
+        format.
+      </p>
+      <p><code>del</code> can be <del datetime="2017-10-11T01:25-07:00">varily</del> used to mark deletions. <code>ins</code> marks <ins datetime="2007-12-19 00:00Z">insertions</ins>. <code>s</code>: similar to <code>del</code>, but used to mark content
+        that is no longer relevant. <s>Windows XP version available.</s> <code>u</code>: a holdover with no real meaning that should be <u>removed</u>. <code>mark</code>: the HTML equivalent of the <mark>yellow highlighter</mark>. <code>span</code>: a
+        <span>generic element</span> with no meaning by itself.</p>
+      <p><code>dfn</code>: Foreign phrases add a certain <dfn lang="fr" title="French: indefinable quality">je ne sais quoi</dfn> to one's prose.
+      </p>
+      <p><code>q</code>: The W3C page <cite>About W3C</cite> says the W3C’s mission is <q cite="https://www.w3.org/Consortium/">To lead the World
+            Wide Web to its full potential by developing protocols and
+            guidelines that ensure long-term growth for the Web</q>.</p>
+      <p><code>kbd</code> and <code>samp</code>: I did this:</p>
+      <pre><samp>c:\&gt;<kbd>format c: /yes</kbd></samp></pre>
+      <p>Is that bad? Press <kbd><kbd>Ctrl</kbd></kbd>+<kbd><kbd>F5</kbd></kbd>
+        for a hard reload.</p>
+      <p><code>var</code>: To log in, type <kbd>ssh <var>user</var>@example.com</kbd>, where <var>user</var> is your user ID.</p>
+      <p><code>meter</code> and <code>progress</code>: Storage space usage:
+        <meter value=6 max=8>6 blocks used (out of 8 total)</meter> Progress:
+        <progress value="37" max=100>37%</progress></p>
+      <p><code>sub</code> is used for subscripts: H<sub>2</sub>O. <code>sup</code> is used for superscripts: E = MC<sup>2</sup>. <code>small</code> is used for side comments: <q>I wrote this whole document. <small>[Editor's
+              note: no he did not]</small></q> <code>wbr</code>: used to specify where a word may break and it is super<wbr>cali<wbr>fragil<wbr>istic<wbr>expiali<wbr>do<wbr>cious.</p>
+      <footer>
+        <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#phrasing-content">Phrasing
+              Content spec.</a></p>
+      </footer>
+    </section>
+    <hr>
+    <section id="palpable">
+      <header>
+        <h3><a href="#palpable">#</a> Palpable Content</h3>
+        <p>Elements <code>a</code>, <code>address</code>, <code>blockquote</code>,
+          <code>button</code>, <code>details</code>, <code>dl</code>, <code>fieldset</code>,
+          <code>figure</code>, <code>form</code>, <code>input</code>, <code>label</code>,
+          <code>map</code>, <code>ol</code>, <code>output</code>, <code>pre</code>,
+          <code>select</code>, <code>table</code>, <code>textarea</code>,
+          <code>ul</code>, and others make up the <em>palpable content</em> category.
+        </p>
+      </header>
+      <p><code>a</code>: <a href="http://example.com">Example</a>.</p>
+      <p><code>address</code>:</p>
+      <address>1 Infinite Loop<br>
+          Cupertino, CA 95014<br>
+          United States</address>
+      <p><code>blockquote</code>:</p>
+      <blockquote>
+        <p>I quickly explained that many big jobs involve few hazards</p>
+      </blockquote>
+      <blockquote>
+        <p>This is a mult-line blockquote with a cite reference. People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to
+          pick carefully. I’m actually as proud of the things we haven’tdone as the things I have done. Innovation is saying no to 1,000 things.</p>
+        <footer>Steve Jobs, <cite>Apple Worldwide Developers’ Conference,
+              1997</cite></footer>
+      </blockquote>
+      <p><code>details</code> and <code>summary</code>:</p>
+      <details>
+        <summary>Copying... <progress max="375505392" value="97543282"></progress> 25%
+        </summary>
+        <dl>
+          <dt>Transfer rate:</dt>
+          <dd>452KB/s</dd>
+          <dt>Duration:</dt>
+          <dd>01:16:27</dd>
+          <dt>Color profile:</dt>
+          <dd>SD (6-1-6)</dd>
+          <dt>Dimensions:</dt>
+          <dd>320×240</dd>
+        </dl>
+      </details>
+      <p><code>dl</code>:</p>
+      <dl>
+        <dt>Definition List Title</dt>
+        <dd>Definition list division.</dd>
+        <dt>Kitchen Sink</dt>
+        <dd>Used in expressions to describe work in which all conceivable (and some inconceivable) sources have been mined. In this case, a bunch of markup.</dd>
+        <dt>aside</dt>
+        <dd>Defines content aside from the page content</dd>
+        <dt>blockquote</dt>
+        <dd>Defines a section that is quoted from another source</dd>
+      </dl>
+      <p><code>figure</code>:</p>
+      <figure>
+        <img src="https://www.fillmurray.com/402/295">
+        <figcaption>Figure 1: A picture of Bill Murray from <a href="https://www.fillmurray.com/">fillmurray.com</a>
+        </figcaption>
+      </figure>
+      <br><br>
+      <h4 id="forms"><a href="#forms">#</a> Forms</h4>
+      <hr>
+      <form>
+        <p>
+          <label for="example-input-email">Email address</label>
+          <input type="email" id="example-input-email">
+        </p>
+        <p>
+          <label for="example-input-number">Number</label>
+          <input type="number" id="example-input-number">
+        </p>
+        <p>
+          <label for="example-input-password">Password</label>
+          <input type="password" id="example-input-password">
+        </p>
+        <p>
+          <label for="example-input-search">Search</label>
+          <input type="search" id="example-input-search">
+        </p>
+        <p>
+          <label for="example-input-tel">Telephone number</label>
+          <input type="tel" id="example-input-tel">
+        </p>
+        <p>
+          <label for="example-input-text">Text</label>
+          <input type="text" id="example-input-text">
+        </p>
+        <p>
+          <label for="example-input-readonly">Read-only</label>
+          <input type="text" readonly value="Can't touch this!">
+        </p>
+        <p>
+          <label for="example-input-disabled">Disabled</label>
+          <input type="text" disabled value="Not available">
+        </p>
+        <p>
+          <label for="example-input-url">URL</label>
+          <input type="url" id="example-input-url">
+        </p>
+        <p>
+          <label for="example-input-color">Color</label>
+          <input type="color" id="example-input-color">
+        </p>
+        <p>
+          <label for="example-input-date">Date</label>
+          <input type="date" id="example-input-date">
+        </p>
+        <p>
+          <label for="example-input-date-time">Date / Time</label>
+          <input type="datetime" id="example-input-date-time">
+        </p>
+        <p>
+          <label for="example-input-date-time-local">Date / Time local</label>
+          <input type="datetime-local" id="example-input-date-time-local">
+        </p>
+        <p>
+          <label for="example-input-month">Month</label>
+          <input type="month" id="example-input-month">
+        </p>
+        <p>
+          <label for="example-input-week">Week</label>
+          <input type="week" id="example-input-week">
+        </p>
+        <p>
+          <label for="example-input-time">Time</label>
+          <input type="time" id="example-input-time">
+        </p>
+        <p>
+          <label for="example-input-file">File input</label>
+          <input type="file" id="example-input-file">
+        </p>
+        <p>
+          <label for="example-input-range">Range input</label>
+          <input type="range" id="example-input-range" min="1" max="4" value="3">
+        </p>
+        <p>
+          <label for="example-select1">Select</label>
+          <select id="example-select1">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+        </p>
+        <p>
+          <label for="example-select1a">Select with size</label>
+          <select id="example-select1a" size="2">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+        </p>
+        <p>
+          <label for="example-select2">Multiple select</label>
+          <select multiple id="example-select2">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+        </p>
+        <p>
+          <label for="example-optgroup">Select with optgroup: Favorite Car</label>
+          <select id="example-optgroup">
+              <optgroup label="Swedish Cars">
+                <option>Volvo</option>
+                <option>Saab</option>
+              </optgroup>
+              <optgroup label="German Cars">
+                <option>Mercedes</option>
+                <option>Audi</option>
+              </optgroup>
+            </select>
+        </p>
+        <p>
+          <label for="example-optgroup2">Select with optgroup and size:
+              Favorite Dish</label>
+          <select id="example-optgroup2" size="2">
+              <optgroup label="Vegetarian">
+                <option>Green Salad</option>
+                <option>French Fries</option>
+              </optgroup>
+              <optgroup label="Carnivorous">
+                <option>Big Mac</option>
+                <option>Roast Beef</option>
+              </optgroup>
+            </select>
+        </p>
+        <p>
+          <label for="example-optgroup3">Multiple select with optgroup: Public
+              transport</label>
+          <select id="example-optgroup3" multiple>
+              <optgroup label="Ground">
+                <option>Train</option>
+                <option>Bus</option>
+              </optgroup>
+              <optgroup label="Water">
+                <option>Ship</option>
+                <option>Submarine</option>
+              </optgroup>
+              <optgroup label="Air">
+                <option>Plane</option>
+                <option>Balloon</option>
+              </optgroup>
+            </select>
+        </p>
+        <p>
+          <label for="example-textarea">Textarea</label>
+          <textarea id="example-textarea" rows="3"></textarea>
+        </p>
+        <fieldset>
+          <legend>I am legend</legend>
+          <div>
+            <input type="radio" name="option-radio" id="option-radio1" value="option1" checked>
+            <label for="option-radio1">Option one is this and that&mdash;be
+                sure to include why it's great</label>
+          </div>
+          <div>
+            <input type="radio" name="option-radio" id="option-radio2" value="option2">
+            <label>Option two can be something else and selecting it will
+                deselect option one</label>
+          </div>
+          <div>
+            <input type="radio" name="option-radio" id="option-radio3" value="option3" disabled>
+            <label>Option three is disabled</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>I am also legend</legend>
+          <input type="checkbox" id="checkbox1">
+          <label for="checkbox1">Check me out</label>
+          <input type="checkbox" id="checkbox2">
+          <label for="checkbox2">and/or check me out</label>
+        </fieldset>
+        <p>
+          <button type="button" name="button">Button</button>
+          <input type="button" name="input" value="Input Button">
+          <input type="submit" name="submit" value="Input Submit">
+          <button type="submit" name="submit2">Submit</button>
+          <input type="reset" name="reset" value="Input Reset">
+          <button type="reset" name="reset2">Reset</button>
+          <button disabled>Cancel</button>
+        </p>
+
+        <!-- form validation class: has-success -->
+        <div class="form-group has-success">
+          <label class="form-label" for="input-example-1">Name</label>
+          <input class="form-input" type="text" id="input-example-1" placeholder="...">
+          <p class="form-input-hint">The name is invalid.</p>
+        </div>
+
+        <!-- form validation class: is-success -->
+        <div class="form-group">
+          <label class="form-label" for="input-example-1">Name</label>
+          <input class="form-input is-success" type="text" id="input-example-1" placeholder="...">
+          <p class="form-input-hint">The name is invalid.</p>
+        </div>
+
+        <!-- form validation class: has-error -->
+        <div class="form-group has-error">
+          <label class="form-label" for="input-example-1">Name</label>
+          <input class="form-input" type="text" id="input-example-1" placeholder="...">
+          <p class="form-input-hint">The name is invalid.</p>
+        </div>
+
+        <!-- form validation class: is-error -->
+        <div class="form-group">
+          <label class="form-label" for="input-example-1">Name</label>
+          <input class="form-input is-error" type="text" id="input-example-1" placeholder="...">
+          <p class="form-input-hint">The name is invalid.</p>
+        </div>
+      </form>
+      <p><code>ul</code> and <code>ol</code>:</p>
+      <ul>
+        <li>Unordered List item one
+          <ul>
+            <li>Nested list item
+              <ul>
+                <li>Level 3, item one</li>
+                <li>Level 3, item two</li>
+                <li>Level 3, item three</li>
+                <li>Level 3, item four</li>
+              </ul>
+            </li>
+            <li>List item two</li>
+            <li>List item three</li>
+            <li>List item four</li>
+          </ul>
+        </li>
+        <li>List item two</li>
+        <li>List item three</li>
+        <li>List item four</li>
+      </ul>
+      <ol>
+        <li>List item one
+          <ol>
+            <li>List item one
+              <ol>
+                <li>List item one</li>
+                <li>List item two</li>
+                <li>List item three</li>
+                <li>List item four</li>
+              </ol>
+            </li>
+            <li>List item two</li>
+            <li>List item three</li>
+            <li>List item four</li>
+          </ol>
+        </li>
+        <li>List item two</li>
+        <li>List item three</li>
+        <li>List item four</li>
+      </ol>
+      <p><code>output</code>:</p>
+      <form onsubmit="return false" oninput="o.value= a.valueAsNumber +
+          b.valueAsNumber">
+        <input name=a type=number step=any> +
+        <input name=b type=number step=any> =
+        <output name=o for="a b"></output>
+      </form>
+      <p><code>pre</code>:</p>
+      <pre>
+pre {
+  display: block;
+  padding: 7px;
+  background-color: #F5F5F5;
+  border: 1px solid #E1E1E8;
+  border-radius: 3px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-family: Menlo, Monaco;
+  line-height: 160%;
+}</pre>
+      <pre><code class="language-css">pre {
+  display: block;
+  padding: 7px;
+  background-color: #F5F5F5;
+  border: 1px solid #E1E1E8;
+  border-radius: 3px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-family: Menlo, Monaco;
+  line-height: 160%;
+}</code></pre>
+      <pre><samp>You are in an open field west of a big white house with a boarded
+front door.
+There is a small mailbox here.
+
+></samp> <kbd>open mailbox</kbd>
+
+<samp>Opening the mailbox reveals:
+A leaflet.
+
+></samp></pre><br><br>
+      <h4 id="tables"><a href="#tables">#</a> Tables</h4>
+      <hr>
+      <table>
+        <caption>Tables can have captions now.</caption>
+        <tbody>
+          <tr>
+            <th>Person</th>
+            <th>Number</th>
+            <th>Third Column</th>
+          </tr>
+          <tr>
+            <td>Someone Lastname</td>
+            <td>900</td>
+            <td>Nullam quis risus eget urna mollis ornare vel eu leo.</td>
+          </tr>
+          <tr>
+            <td><a href="#">Person Name</a></td>
+            <td>1200</td>
+            <td>Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</td>
+          </tr>
+          <tr>
+            <td>Another Person</td>
+            <td>1500</td>
+            <td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</td>
+          </tr>
+          <tr>
+            <td>Last One</td>
+            <td>2800</td>
+            <td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p id="table-summary">In the following table, characteristics are given in the second column, with the negative side in the left column and the positive side in the right column.</p>
+      <table aria-describedby="table-summary">
+        <caption>Characteristics with positive and negative sides</caption>
+        <thead>
+          <tr>
+            <th id="n">Negative</th>
+            <th>Characteristic</th>
+            <th id="p">Positive</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td headers="n r1">Sad</td>
+            <th id="r1">Mood</th>
+            <td headers="p r1">Happy</td>
+          </tr>
+          <tr>
+            <td headers="n r2">Failing</td>
+            <th id="r2">Grade</th>
+            <td headers="p r2">Passing</td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <caption>Complex table with a <code>thead</code>, multiple <code>tbody</code> elements, and a <code>tfoot</code>.</caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th>2008</th>
+            <th>2007</th>
+            <th>2006</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Net sales</th>
+            <td>$32,479</td>
+            <td>$24,006</td>
+            <td>$19,315</td>
+          </tr>
+          <tr>
+            <th>Cost of sales</th>
+            <td>21,334</td>
+            <td>15,852</td>
+            <td>13,717</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th>Gross margin</th>
+            <td>$11,145</td>
+            <td>$8,154</td>
+            <td>$5,598</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Gross margin percentage</th>
+            <td>34.3%</td>
+            <td>34.0%</td>
+            <td>29.0%</td>
+          </tr>
+        </tfoot>
+      </table>
+      <footer>
+        <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#palpable-content">Palpable
+              Content spec.</a></p>
+      </footer>
+    </section>
+    <hr>
+    <section id="embeds">
+      <header>
+        <h3><a href="#embeds">#</a> Embeds</h3>
+        <p>Elements <code>audio</code>, <code>canvas</code>, <code>embed</code>,
+          <code>iframe</code>, <code>img</code>, <code>math</code>, <code>object</code>,
+          <code>picture</code>, <code>svg</code>, <code>video</code> make up the <em>embedded content</em> category.</p>
+      </header>
+      <p><code>audio</code>: <audio controls src="https://upload.wikimedia.org/wikipedia/commons/c/c7/What_hath_God_wrought.ogg"></audio> By Cqdx [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC
+            BY-SA 3.0 </a>], <a href="https://commons.wikimedia.org/wiki/File:What_hath_God_wrought.ogg">from
+            Wikimedia Commons</a>.</p>
+      <p><code>embed</code>: <embed src="http://www.bannerblog.com.au/banners2009/mini-options-300x250-hq-en.swf" width="120" height="50" type='application/pdf'></p>
+      <p><code>iframe</code>: <iframe sandbox srcdoc="<h1>Sample Document</h1><p>This
+            is a sample content.</p>"></iframe></p>
+      <p><code>img</code>: <img src="https://www.fillmurray.com/150/150" alt="Bill Murray"></p>
+      <p><code>math</code>:</p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <mtable>
+          <mtr>
+            <mtd>
+              <mtext>Quadratic Equation</mtext>
+            </mtd>
+            <mtd>
+              <mrow>
+                <mi>x</mi>
+                <mo>=</mo>
+                <mfrac>
+                  <mrow>
+                    <mo>-</mo>
+                    <mi>b</mi>
+                    <mo>&#x00B1;</mo>
+                    <msqrt>
+                      <mrow>
+                        <msubsup>
+                          <mi>b</mi>
+                          <mrow></mrow>
+                          <mn>2</mn>
+                        </msubsup>
+                        <mo>-</mo>
+                        <mn>4</mn>
+                        <mi>a</mi>
+                        <mi>c</mi>
+                      </mrow>
+                    </msqrt>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn>
+                    <mi>a</mi>
+                  </mrow>
+                </mfrac>
+              </mrow>
+            </mtd>
+          </mtr>
+        </mtable>
+      </math>
+      <p><code>picture</code>:
+        <picture>
+          <source srcset="https://www.fillmurray.com/240/300 2x,
+            https://www.fillmurray.com/120/150 1x">
+          <img src="https://www.fillmurray.com/120/150" alt="Bill Murray">
+        </picture>
+      </p>
+      <p><code>svg</code>: <svg role="presentation" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.199 24C19.199 13.467
+            10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291
+            17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301
+            3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909
+            24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909
+            7.184 15.909 15.91z" /></svg></p>
+      <p><code>video</code>: <video controls src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Dwarf_hamsters_running_on_disc_2.ogv"></video></p>
+      <footer>
+        <p>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#embedded-content">Embedded
+              Content spec.</a></p>
+      </footer>
+    </section>
+    <hr>
+
+    <ul>
+      <li>This is a list item</li>
+      <li>So is this - there could be more</li>
+      <li>Make sure to style list items to:
+        <ul>
+          <li>Not forgetting child list items</li>
+          <li>Not forgetting child list items</li>
+          <li>Not forgetting child list items</li>
+          <li>Not forgetting child list items</li>
+        </ul>
+      </li>
+      <li>A couple more</li>
+      <li>top level list items</li>
+    </ul>
+    <p>Don't forget <strong>Ordered lists</strong>:</p>
+    <ol>
+      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+      <li>Aliquam tincidunt mauris eu risus.
+        <ol>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>Aliquam tincidunt mauris eu risus.</li>
+        </ol>
+      </li>
+      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+      <li>Aliquam tincidunt mauris eu risus.</li>
+    </ol>
+    <h2>A sub heading which is not as important as the first, but is quite imporant overall</h2>
+    <p>
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris
+      placerat eleifend leo.
+    </p>
+
+    <table class="t1" summary="Top 10 downloaded movies in 2011 using BitTorrent, in descending order, listing number of downloads and worldwide cinema grosses">
+      <caption>
+        Most Downloaded Movies on BitTorrent, 2011
+      </caption>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Movie</th>
+          <th>Downloads</th>
+          <th>Grosses</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th colspan="4">torrentfreak.com</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td>Fast Five</td>
+          <td>9,260,000</td>
+          <td>$626,137,675</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>The Hangover II</td>
+          <td>8,840,000</td>
+          <td>$581,464,305</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>Thor</td>
+          <td>8,330,000</td>
+          <td>$449,326,618</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td>Source Code</td>
+          <td>7,910,000</td>
+          <td>$123,278,618</td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td>I Am Number Four</td>
+          <td>7,670,000</td>
+          <td>$144,500,437</td>
+        </tr>
+        <tr>
+          <th>6</th>
+          <td>Sucker Punch</td>
+          <td>7,200,000</td>
+          <td>$89,792,502</td>
+        </tr>
+        <tr>
+          <th>7</th>
+          <td>127 Hours</td>
+          <td>6,910,000</td>
+          <td>$60,738,797</td>
+        </tr>
+        <tr>
+          <th>8</th>
+          <td>Rango</td>
+          <td>6,480,000</td>
+          <td>$245,155,348</td>
+        </tr>
+        <tr>
+          <th>9</th>
+          <td>The King’s Speech</td>
+          <td>6,250,000</td>
+          <td>$414,211,549</td>
+        </tr>
+        <tr>
+          <th>10</th>
+          <td>Harry Potter and the Deathly Hallows Part 2</td>
+          <td>6,030,000</td>
+          <td>$1,328,111,219</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <tr>
+        <th>
+          Table Heading
+        </th>
+        <th>
+          Table Heading
+        </th>
+      </tr>
+      <tr>
+        <td>
+          table data
+        </td>
+        <td>
+          table data
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table data
+        </td>
+        <td>
+          table data
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table data
+        </td>
+        <td>
+          table data
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table data
+        </td>
+        <td>
+          table data
+        </td>
+      </tr>
+    </table>
+
+    <h3>A sub heading which is not as important as the second, but should be used with consideration</h3>
+    <p>
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris
+      placerat eleifend leo.
+    </p>
+
+    <blockquote>
+      <p><em>This is a properly formatted blockquote, btw.</em> Measuring programming progress by lines of code is like measuring aircraft building progress by weight.</p>
+      <footer>
+        — <cite><a href="http://www.thegatesnotes.com">Bill Gates</a></cite>
+      </footer>
+    </blockquote>
+
+    <h4>A sub heading which is not as important as the second, but should be used with consideration</h4>
+    <p>
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris
+      placerat eleifend leo.
+    </p>
+    <blockquote>
+      <p>
+        “Ooh - a blockquote! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus,
+        at luctus turpis elit sit amet quam. Vivamus pretium ornare est.”
+      </p>
+    </blockquote>
+
+    <pre>
+  <code>
+  #header h1 a {
+    display: block;
+    width: 300px;
+    height: 80px;
+  }
+  </code>
+  </pre>
+
+    <dl>
+      <dt>Definition list</dt>
+      <dd>
+        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </dd>
+      <dt>Lorem ipsum dolor sit amet</dt>
+      <dd>
+        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </dd>
+    </dl>
+
+    <blockquote>
+      <p>
+        Paragraph inside Blockquote: Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Sed scelerisque sagittis lorem.
+      </p>
+    </blockquote>
+    <address>
+    Address: Example address 224, Sweden
+  </address>
+    <pre>
+  <strong>Preformated:</strong>Testing one row
+       and another
+  </pre>
+    <p>
+      I am <a href="?abc123">the a tag</a> example<br> I am <abbr title="test">the abbr tag</abbr> example<br> I am <acronym>the acronym tag</acronym> example<br> I am <b>the b tag</b> example<br> I am <big>the big tag</big> example<br> I am <cite>the cite tag</cite>      example<br> I am <code>the code tag</code> example<br> I am <del>the del tag</del> example<br> I am <dfn>the dfn tag</dfn> example<br> I am <em>the em tag</em> example<br> I am <i>the i tag</i> example<br> I am <ins>the ins tag</ins> example<br>      I am <kbd>the kbd tag</kbd> example<br> I am <q>the q tag</q> example<br> I am <samp>the samp tag</samp> example<br> I am <small>the small tag</small> example<br> I am <span>the span tag</span> example<br> I am <strong>the strong tag</strong> example<br>      I am <sub>the sub tag</sub> example<br> I am <sup>the sup tag</sup> example<br> I am <tt>the tt tag</tt> example<br> I am <var>the var tag</var> example<br> I am the <span class="small">small class</span> example<br> I am the <span class="large">large class</span>      example<br> I am the <span class="quiet">quiet class</span> example<br> I am the <span class="highlight">highlight class</span> example<br>
+    </p>
+
+    <hr>
+
+    <ul>
+      <li>Unordered list 01</li>
+      <li>Unordered list 02</li>
+      <li>Unordered list 03
+        <ul>
+          <li>Unordered list inside list level 2</li>
+          <li>Unordered list inside list level 2
+            <ul>
+              <li>Unordered list inside list level 3</li>
+              <li>Unordered list inside list level 3</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ol>
+      <li>Ordered list 01</li>
+      <li>Ordered list 02</li>
+      <li>Ordered list 03
+        <ol>
+          <li>Ordered list inside list level 2</li>
+          <li>Ordered list inside list level 2
+            <ol>
+              <li>Ordered list inside list level 3</li>
+              <li>Ordered list inside list level 3</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+
+    <dl>
+      <dt>
+      Description list title 01
+    </dt>
+      <dd>
+        Description list description 01
+      </dd>
+      <dt>
+      Description list title 02
+    </dt>
+      <dd>
+        Description list description 02
+      </dd>
+      <dd>
+        Description list description 03
+      </dd>
+    </dl>
+
+    <table>
+      <caption>
+        Table Caption
+      </caption>
+      <thead>
+        <tr>
+          <th>
+            Table head th
+          </th>
+          <td>
+            Table head td
+          </td>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>
+            Table foot th
+          </th>
+          <td>
+            Table foot td
+          </td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <th>
+            Table body th
+          </th>
+          <td>
+            Table body td
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Table body td
+          </td>
+          <td>
+            Table body td
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form action="#">
+      <fieldset>
+        <legend>Form legend</legend>
+        <div>
+          <label for="f1">Text input:</label>
+          <input type="text" id="f1" value="input text">
+        </div>
+        <div>
+          <label for="pw">Password input:</label>
+          <input type="password" id="pw" value="password">
+        </div>
+        <div>
+          <label for="f2">Radio input:</label>
+          <input type="radio" id="f2">
+        </div>
+        <div>
+          <label for="f3">Checkbox input:</label>
+          <input type="checkbox" id="f3">
+        </div>
+        <div>
+          <label for="f4">Select field:</label>
+          <select id="f4">
+          <option>
+            Option 01
+          </option>
+          <option>
+            Option 02
+          </option>
+        </select>
+        </div>
+        <div>
+          <label for="f5">Textarea:</label>
+          <textarea id="f5" cols="30" rows="5">Textarea text</textarea>
+        </div>
+        <div>
+          <label for="f6">Input Button:</label>
+          <input type="button" id="f6" value="button text">
+        </div>
+        <div>
+          <label>Button Elements: <span class="small quiet">Can use &lt;button&gt; tag or &lt;a class="button"&gt;</span></label>
+          <button class="button positive"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/tick.png" alt=""> Save</button> <a class="button" href="#"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/key.png" alt=""> Change Password</a>          <a href="#" class="button negative"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/cross.png" alt=""> Cancel</a>
+        </div>
+      </fieldset>
+    </form>
+
+    I am <a href="http://www.something.doc">a word document</a> link, so readers know that I'm not a normal link.<br> I am <a href="http://www.something.pdf">a pdf document</a> link, so readers know that I'm not a normal link.<br> I am <a href="http://www.something.com">an external website</a>    link, so readers know that I'm not a normal link.<br> I am <a href="http://www.something.rss">an rss feed</a> link, so readers know that I'm not a normal link.<br> I am <a href="http://www.something.xls">an excel spreadsheet</a> link, so readers know that I'm not a normal
+    link.
+    <br> I am <a href="aim:something">an AIM screenname</a> link, so readers know that I'm not a normal link.<br> I am <a href="mailto:something">an email address</a> link, so readers know that I'm not a normal link.<br> I am <a href="http://yourwebsite.com">an internal link</a>.
+    Change the stylesheet's "http://yourwebsite.com" to your domain name so I don't look like an external link.<br>
+
+    <br>
+
+    <p class="success">
+      <img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/tick.png" alt=""> This is a paragraph with class="success" and <a href="http://www.something.com">a link</a>.
+    </p>
+    <p class="error">
+      <img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/cross.png" alt=""> This is a paragraph with class="error" and <a href="http://www.something.com">a link</a>.
+    </p>
+    <p class="notice">
+      <img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/information.png" alt=""> This is a paragraph with class="notice" and <a href="http://www.something.com">a link</a>.
+    </p>
+  </main>
+  <footer role="contentinfo">
+    <p>Find this document on <a href="https://github.com/dbox/html5-kitchen-sink">GitHub</a>.</p>
+    <p>Thank you https://github.com/ericrasch/html-kitchen-sink and https://github.com/dbox/html5-kitchen-sink</p>
+  </footer>
+</body>
+
+</html>

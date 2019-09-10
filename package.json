@@ -2,15 +2,23 @@
   "name": "@honestfigs/ui",
   "version": "0.1.0",
   "description": "the styles for the honest figs project",
-  "main": "index.js",
+  "main": "honestfigs.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deployminor": "npm version minor && npm run publish",
+    "deploymajor": "npm version major && npm run publish",
+    "publish": "npm publish --access=public"
   },
   "keywords": [
     "front end",
     "css"
   ],
-  "author": "Cristen Jones",
+  "author": "Cristen Jones <contact@thecristen.net>",
   "license": "GPL-3.0-or-later",
-  "repository": "honest-figs/ui"
+  "repository": "honest-figs/ui",
+  "devDependencies": {
+    "normalize.css": "^8.0.1",
+    "open-color": "^1.7.0",
+    "sass": "^1.23.0-module.beta.1"
+  }
 }

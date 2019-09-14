@@ -1,6 +1,6 @@
-@import url(/Users/cristen/Hacks/hfUI/node_modules/normalize.css/normalize.css);
-@import url("https://fonts.googleapis.com/css?family=Overpass+Mono:400,700&display=swap");
 @import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css?family=Overpass+Mono:400,700|Bungee+Inline|Bungee+Shade&display=swap&subset=latin-ext");
+@import url(/Users/cristen/Hacks/hfUI/node_modules/normalize.css/normalize.css);
 html {
   font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-feature-settings: 'tnum' 1, 'dlig' 1, 'zero' 1, 'frac' 1, 'cpsp' 1, 'ss01' 1, 'ss02' 1;
@@ -16,22 +16,20 @@ html {
 
 body {
   counter-reset: table-counter;
+  color: #313233;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-family: 'Bungee Inline', cursive;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: inherit;
-  font-weight: 700;
+  color: #313233;
+  font-weight: 500;
   line-height: 1.2;
-  margin-bottom: .5em;
+  margin-bottom: .5rem;
   margin-top: 0;
-}
-
-a {
-  color: #1098ad;
-}
-
-a:hover {
-  color: #0b7285;
 }
 
 a,
@@ -41,97 +39,14 @@ u {
           text-decoration-skip: ink edges;
 }
 
-del {
-  color: #adb5bd;
-}
-
-blockquote {
-  border-left: 2px #96f2d7 solid;
-  margin-left: 0;
-  padding: 1em 2em;
-}
-
-fieldset {
-  border: 2px #eebefa dotted;
-}
-
-fieldset legend {
-  color: #cc5de8;
-  padding: 0 0.25rem;
-  font-weight: 700;
-  font-size: small;
-}
-
-label {
-  font-weight: 500;
-}
-
-hr {
-  border: 1px #96f2d7 solid;
-}
-
 abbr[title] {
   border-bottom: 1px dotted;
   cursor: help;
   text-decoration: none;
 }
 
-code:not([class]), pre, kbd, samp, var {
-  background: #fff0f6;
-  border: 1px #ffdeeb solid;
-  color: #7950f2;
-  border-radius: 0.25em;
-  line-height: 1.2;
-  padding: .1rem .2rem;
-  font-family: "Overpass Mono","SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
-  -webkit-font-feature-settings: 'frac' 0;
-          font-feature-settings: 'frac' 0;
-  font-size: 94%;
-}
-
-code[class] {
-  font-family: "Overpass Mono","SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
-  -webkit-font-feature-settings: 'frac' 0;
-          font-feature-settings: 'frac' 0;
-  font-size: 94%;
-  line-height: 1.2;
-}
-
-mark {
-  background-color: #fff3bf;
-}
-
-input, textarea {
-  border: 1px #ced4da solid;
-  height: 1.2rem;
-  line-height: 1.2rem;
-  font-size: 1rem;
-  padding: 0.25rem;
-  color: #7950f2;
-}
-
-select {
-  border: 1px #ced4da solid;
-  font-size: 1rem;
-  padding: 0.25rem;
-  color: #7950f2;
-}
-
-button, input[type="submit"], input[type="reset"], input[type="button"] {
-  font-size: unset;
-  height: unset;
-  font-variant: all-small-caps;
+dl dt {
   font-weight: 700;
-  color: #212529;
-  background-color: #f1f3f5;
-  border: 1px #ced4da solid;
-  border-radius: 0.4em;
-  padding: 0.15em 0.45em;
-}
-
-button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
-  background-color: #dee2e6;
-  border-color: #adb5bd;
 }
 
 sub {
@@ -146,7 +61,116 @@ sup {
 
 sub, sup {
   font-size: 95%;
-  position: initial;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.1em;
+}
+
+sub {
+  top: 0.1em;
+}
+
+label {
+  font-weight: 500;
+}
+
+code[class] {
+  font-family: "Overpass Mono","SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
+  -webkit-font-feature-settings: 'frac' 0;
+          font-feature-settings: 'frac' 0;
+  font-size: 94%;
+  line-height: 1.2;
+}
+
+a {
+  color: #c91f60;
+}
+
+a:hover {
+  color: #711136;
+  cursor: crosshair;
+}
+
+del {
+  color: #a6dcf0;
+}
+
+blockquote {
+  border-left: 3px #a6dcf0 solid;
+  font-size: small;
+  margin-left: 0;
+  padding: 1em 2em;
+}
+
+fieldset {
+  border: 2px #a6dcf0 dotted;
+}
+
+fieldset legend {
+  color: #313233;
+  padding: 0 0.25rem;
+  font-weight: 700;
+  font-size: small;
+}
+
+hr {
+  border: 1px #a6dcf0 solid;
+}
+
+code:not([class]), pre, kbd, samp, var {
+  background: #dff2fa;
+  border: 1px #6dc6e6 solid;
+  color: #197597;
+  border-radius: 0.25em;
+  line-height: 1.2;
+  padding: .1rem .2rem;
+  font-family: "Overpass Mono","SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
+  -webkit-font-feature-settings: 'frac' 0;
+          font-feature-settings: 'frac' 0;
+  font-size: 94%;
+}
+
+mark {
+  background-color: #a6dcf0;
+}
+
+input, textarea {
+  background-color: #e7f6fb;
+  border: 1px transparent solid;
+  border-bottom-color: #a6dcf0;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  font-size: 1rem;
+  padding: 0.25rem;
+  color: #313233;
+}
+
+input:focus, input:hover, input:active, textarea:focus, textarea:hover, textarea:active {
+  border: 1px #a6dcf0 solid;
+}
+
+select {
+  border: 1px #a6dcf0 solid;
+  font-size: 1rem;
+  padding: 0.25rem;
+  color: #313233;
+}
+
+button, input[type="submit"], input[type="reset"], input[type="button"] {
+  font-size: unset;
+  height: unset;
+  font-variant: all-small-caps;
+  font-weight: 700;
+  color: #313233;
+  background-color: #a6dcf0;
+  border: 1px #65c2e5 solid;
+  border-bottom-width: 3px;
+  border-radius: 0.3em;
+  padding: 0.1em 0.45em 0.15em;
+}
+
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+  background-color: #e7f6fb;
 }
 
 ul {
@@ -159,8 +183,8 @@ ul li {
 
 ul li::before {
   content: "";
-  background-color: #edf2ff;
-  border: 0.05em #dbe4ff solid;
+  background-color: #a6dcf0;
+  border: 0.05em #7acbe9 solid;
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
@@ -170,13 +194,13 @@ ul li::before {
 }
 
 ul li li::before {
-  background-color: #dbe4ff;
-  border-color: #bac8ff;
+  background-color: #90d3ec;
+  border-color: #65c2e5;
 }
 
 ul li li li::before {
-  background-color: #bac8ff;
-  border-color: #91a7ff;
+  background-color: #7acbe9;
+  border-color: #4fbae1;
 }
 
 ol {
@@ -191,14 +215,14 @@ ol li {
 
 ol li::before {
   content: counter(ol-counter);
-  color: #4263eb;
-  border: 0.05em #dbe4ff solid;
+  color: #313233;
+  background-color: #a6dcf0;
+  border: 0.05em #90d3ec solid;
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
   display: inline-block;
   line-height: 1rem;
-  background-color: #edf2ff;
   font-size: 0.75em;
   font-weight: 700;
   text-align: center;
@@ -206,19 +230,13 @@ ol li::before {
 }
 
 ol li li::before {
-  color: #3b5bdb;
-  background-color: #dbe4ff;
-  border-color: #bac8ff;
+  background-color: #90d3ec;
+  border-color: #65c2e5;
 }
 
 ol li li li::before {
-  color: #364fc7;
-  background-color: #bac8ff;
-  border-color: #91a7ff;
-}
-
-dl dt {
-  font-weight: 700;
+  background-color: #7acbe9;
+  border-color: #4fbae1;
 }
 
 table {
@@ -233,7 +251,7 @@ table td, table th {
 }
 
 table tr:hover {
-  background-color: #fff9db;
+  background-color: #d2edf7;
 }
 
 table caption {
@@ -247,21 +265,38 @@ table caption::before {
 }
 
 thead th,
+thead td {
+  border-bottom: 3px #a6dcf0 solid;
+}
+
+tfoot th,
+tfoot td {
+  border-top: 3px #a6dcf0 solid;
+}
+
+thead th,
 thead td,
 tfoot th,
 tfoot td {
-  background-color: #fff9db;
-  border: 1px #ffec99 solid;
-  border-radius: 0.25rem;
-  color: #e67700;
+  color: #313233;
 }
 
 tbody th {
-  color: #f59f00;
+  color: #39b1de;
   font-size: small;
 }
 
-main {
-  margin: 1em;
+.logo {
+  font-family: 'Bungee Shade', cursive;
+  color: #c91f60;
+}
+
+.nav {
+  font-family: 'Bungee Inline', cursive;
+  font-size: small;
+}
+
+.nav a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=honestfigs.css.map */

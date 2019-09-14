@@ -1,8 +1,4 @@
-// code[class*="language-"],
-// pre[class*="language-"] {
-//     font-family: $mono-font-family;
-//     font-weight: 500;
-// }
+@import "../settings/all";
 
 html {
     font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -16,22 +12,20 @@ html {
 
 body {
     counter-reset: table-counter;
+    color: $dark-1;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    font-family: 'Bungee Inline', cursive;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: inherit;
-    font-weight: 700;
+    color: $dark-1;
+    font-weight: 500;
     line-height: 1.2;
-    margin-bottom: .5em;
+    margin-bottom: .5rem;
     margin-top: 0;
-}
-
-a {
-    color: $oc-cyan-7;
-
-    &:hover {
-        color: $oc-cyan-9;
-    }
 }
 
 a,
@@ -40,51 +34,34 @@ u {
   text-decoration-skip: ink edges;
 }
 
-del {
-    color: $oc-gray-5;
-}
-
-blockquote {
-    border-left: 2px $oc-teal-2 solid;
-    margin-left: 0;
-    padding: 1em 2em;
-}
-
-fieldset {
-    border: 2px $oc-grape-2 dotted;
-
-    legend {
-        color: $oc-grape-5;
-        padding: 0 0.25rem;
-        font-weight: 700;
-        font-size: small;
-    }
-}
-
-label {
-    font-weight: 500;
-}
-
-hr {
-    border: 1px $oc-teal-2 solid;
-}
-
 abbr[title] {
   border-bottom: 1px dotted;
   cursor: help;
   text-decoration: none;
 }
 
-code:not([class]), pre, kbd, samp, var {
-    background: $oc-pink-0;
-    border: 1px $oc-pink-1 solid;
-    color: $oc-violet-6;
-    border-radius: 0.25em;
-    line-height: 1.2;
-    padding: .1rem .2rem;
-    font-family: "Overpass Mono","SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
-    font-feature-settings: 'frac' 0;
-    font-size: 94%;
+
+dl dt {
+    font-weight: 700;
+}
+
+sub { font-feature-settings: "subs"; }
+sup { font-feature-settings: "sups"; }
+
+sub, sup {
+    font-size: 95%;
+    vertical-align: baseline;
+    position: relative;
+    top: -0.1em;
+}
+sub { 
+    top: 0.1em; 
+}
+
+
+
+label {
+    font-weight: 500;
 }
 
 code[class] {
@@ -94,26 +71,81 @@ code[class] {
     line-height: 1.2;
 }
 
+
+
+a {
+    color: $accent-1;
+
+    &:hover {
+        color: darken($accent-1, 20%);
+        cursor: crosshair;
+    }
+}
+
+del {
+    color: $light-1;
+}
+
+blockquote {
+    border-left: 3px $light-1 solid;
+    font-size: small;
+    margin-left: 0;
+    padding: 1em 2em;
+}
+
+fieldset {
+    border: 2px $light-1 dotted;
+
+    legend {
+        color: $dark-1;
+        padding: 0 0.25rem;
+        font-weight: 700;
+        font-size: small;
+    }
+}
+
+
+hr {
+    border: 1px $light-1 solid;
+}
+
+
+code:not([class]), pre, kbd, samp, var {
+    background: lighten($light-1, 13%);
+    border: 1px darken($light-1, 13%) solid;
+    color: darken($light-1, 45%);
+    border-radius: 0.25em;
+    line-height: 1.2;
+    padding: .1rem .2rem;
+    font-family: "Overpass Mono","SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
+    font-feature-settings: 'frac' 0;
+    font-size: 94%;
+}
+
 mark {
-    background-color: $oc-yellow-1;
+    background-color: $light-1;
 }
 
 input, textarea {
-    border: 1px $oc-gray-4 solid;
+    background-color: lighten($light-1, 15%);
+    border: 1px transparent solid;
+    border-bottom-color: $light-1;
     height: 1.2rem;
     line-height: 1.2rem;
     font-size: 1rem;
     padding: 0.25rem;
-    color: $oc-violet-6;
+    color: $dark-1;
+
+    &:focus, &:hover, &:active {
+        border: 1px $light-1 solid;
+    }
 }
 
 select {
-    border: 1px $oc-gray-4 solid;
-    // height: 1.2rem;
-    // line-height: 1.2rem;
+    border: 1px $light-1 solid;
     font-size: 1rem;
     padding: 0.25rem;
-    color: $oc-violet-6;
+    color: $dark-1;
 }
 
 button, input[type="submit"], input[type="reset"], input[type="button"] {
@@ -121,24 +153,16 @@ button, input[type="submit"], input[type="reset"], input[type="button"] {
     height: unset;
     font-variant: all-small-caps;
     font-weight: 700;
-    color: $oc-gray-9;
-    background-color: $oc-gray-1;
-    border: 1px $oc-gray-4 solid;
-    border-radius: 0.4em;
-    padding: 0.15em 0.45em;
+    color: $dark-1;
+    background-color: $light-1;
+    border: 1px darken($light-1,15%) solid;
+    border-bottom-width: 3px;
+    border-radius: 0.3em;
+    padding: 0.1em 0.45em 0.15em;
 
     &:hover {
-        background-color: $oc-gray-3;
-        border-color: $oc-gray-5;
+        background-color: lighten($light-1, 15%);
     }
-}
-
-sub { font-feature-settings: "subs"; }
-sup { font-feature-settings: "sups"; }
-
-sub, sup {
-    font-size: 95%;
-    position: initial;
 }
 
 ul {
@@ -148,8 +172,8 @@ ul {
         margin: 0.25rem;
         &::before {
             content: "";
-            background-color: $oc-indigo-0;
-            border: 0.05em $oc-indigo-1 solid;
+            background-color: $light-1;
+            border: 0.05em darken($light-1, 10%) solid;
             width: 0.5rem;
             height: 0.5rem;
             border-radius: 50%;
@@ -161,13 +185,13 @@ ul {
         li {
             
             &::before {
-                background-color: $oc-indigo-1;
-                border-color: $oc-indigo-2;
+                background-color: darken($light-1, 5%);
+                border-color: darken($light-1, 15%);
             }
 
             li::before {
-                background-color: $oc-indigo-2;
-                border-color: $oc-indigo-3;
+                background-color: darken($light-1, 10%);
+                border-color: darken($light-1, 20%);
             }
         }
     }
@@ -182,14 +206,14 @@ ol {
         margin: 0.25rem;
         &::before {
             content: counter(ol-counter);
-            color: $oc-indigo-7;
-            border: 0.05em $oc-indigo-1 solid;
+            color: $dark-1;
+            background-color: $light-1;
+            border: 0.05em darken($light-1, 5%) solid;
             width: 1rem;
             height: 1rem;
             border-radius: 50%;
             display: inline-block;
             line-height: 1rem;
-            background-color: $oc-indigo-0;
             font-size: 0.75em;
             font-weight: 700;
             text-align: center;
@@ -198,22 +222,16 @@ ol {
 
         li {
             &::before {
-                color: $oc-indigo-8;
-                background-color: $oc-indigo-1;
-                border-color: $oc-indigo-2;
+                background-color: darken($light-1, 5%);
+                border-color: darken($light-1, 15%);
             }
 
             li::before {
-                color: $oc-indigo-9;
-                background-color: $oc-indigo-2;
-                border-color: $oc-indigo-3;
+                background-color: darken($light-1, 10%);
+                border-color: darken($light-1, 20%);
             }
         }
     }
-}
-
-dl dt {
-    font-weight: 700;
 }
 
 table {
@@ -227,7 +245,7 @@ table {
     }
 
     tr:hover {
-        background-color: $oc-yellow-0;
+        background-color: lighten($light-1, 10%);
     }
 
     caption {
@@ -241,16 +259,23 @@ table {
     }
 }
 
+thead th,
+thead td {
+    border-bottom: 3px $light-1 solid;
+}
+
+tfoot th,
+tfoot td {
+    border-top: 3px $light-1 solid;
+}
+
 thead th, 
 thead td,
 tfoot th, 
 tfoot td {
-    background-color: $oc-yellow-0;
-    border: 1px $oc-yellow-2 solid;
-    border-radius: 0.25rem;
-    color: $oc-yellow-9;
+    color: $dark-1;
 }
 tbody th {
-    color: $oc-yellow-7;
+    color: darken($light-1, 25%);
     font-size: small;
 }

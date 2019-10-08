@@ -1,0 +1,52 @@
+@import "~@honestfigs/ui/dist/prism-synthwave84.css";
+@import url('https://fonts.googleapis.com/css?family==PT+Mono&display=swap&subset=latin-ext');
+
+code, 
+pre, 
+kbd, 
+samp, 
+var {
+    border-radius: 0.25em;
+    line-height: 1.2;
+    padding: .1rem .2rem;
+    font-family: "PT Mono", "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
+    font-feature-settings: 'frac' 0;
+    font-size: 94%;
+}
+
+code:not([class]), pre, kbd, samp, var {
+    background: lighten($light-1, 18%);
+    border: 1px $light-1 solid;
+    color: darken($light-1, 45%);
+
+    & & {
+        // if it's nested inside one of these,
+        // then don't put a border on it.
+        border: none;
+    }
+}
+
+.code-toolbar {
+    position: relative;
+    
+    > .toolbar {
+        position: absolute;
+        top: .3em;
+        right: .5em;
+        transition: opacity 0.3s ease-in-out;
+
+        .toolbar-item {
+            display: inline-block;
+        }
+
+        a,
+        span {
+            color: #bbb;
+            font-size: .8em;
+            padding: 0 .5em;
+            background: #f5f2f0;
+            background: rgba(224, 224, 224, 0.2);
+            border-radius: .5em;
+        }
+    }
+}

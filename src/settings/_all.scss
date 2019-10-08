@@ -1,4 +1,9 @@
 // global settings.
-$dark-1: rgb(49, 50, 51);
-$accent-1: rgb(201, 31, 96);
-$light-1: rgb(166, 220, 240);
+$dark-1: rgb(49, 50, 51)        !default;
+$light-1: #8feec6    !default;
+$accent-1: #fa73bf    !default;
+// $light-1: rgb(150, 226, 222)    !default;
+$light-y: #f39f0575;
+$light-b: fdfdfd;
+
+$heading-fonts: "Titillium Web", sans-serif !default;

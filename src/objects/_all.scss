@@ -1,10 +1,5 @@
-.logo {
-    font-family: 'Bungee Shade', cursive;
-    color: $accent-1;
-}
-
 .nav {
-    font-family: 'Bungee Inline', cursive;
+    font-family: $heading-fonts;
     font-size: small;
 
     a {

@@ -1,0 +1,23 @@
+button, 
+input[type="submit"], 
+input[type="reset"], 
+input[type="button"] {
+    @extend %label;
+    font-size: unset;
+    height: unset;
+    color: $dark-1;
+    background-color: $light-1;
+    border: 1px darken($light-1, 15%) solid;
+    border-bottom-width: 3px;
+    border-radius: 0.3em;
+    padding: 0.1em 0.45em 0.15em;
+
+    &:hover {
+        background-color: lighten($light-1, 15%);
+        border-bottom-width: 3px;
+    }
+
+    &[disabled] {
+        @extend %disabled;
+    }
+}

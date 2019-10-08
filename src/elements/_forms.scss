@@ -1,0 +1,69 @@
+fieldset {
+    border: .5rem lighten($light-1, 20%) solid;
+
+    legend {
+        @extend %label;
+        padding: 0 0.25rem;
+    }
+}
+
+label {
+    @extend %label;
+
+    input[type="radio"] + &,
+    input[type="checkbox"] + & {
+        font-variant: normal;
+        font-weight: normal;
+    }
+}
+
+
+::placeholder {
+    color: $light-1;
+}
+
+input, textarea {
+    background-color: lighten($light-1, 20%);
+    border: 1px transparent solid;
+    border-bottom-color: $light-1;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    font-size: 1rem;
+    padding: 0.25rem;
+    color: $dark-1;
+
+    &:focus, &:hover, &:active {
+        border: 1px $light-1 solid;
+    }
+
+    &[disabled], &:read-only, &:-moz-read-only {
+        @extend %disabled;
+    }
+
+    &[required] {
+        border-color: black;
+
+        &:invalid {
+            border-color: red;
+        }
+
+        &:valid {
+            border-color: green;
+        }
+    }
+
+}
+
+select {
+    border: 1px $light-1 solid;
+    background-color: lighten($light-1, 20%);
+    padding: 0.25rem;
+
+    option[selected] {
+        background-color: darken($light-1, 20%);
+    }
+}
+
+::selection {
+    background-color: cyan;
+}

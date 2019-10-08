@@ -1,0 +1,12 @@
+%disabled {  
+    background-color: #ccc;
+    border-color: #666;
+    color: #666;
+    pointer-events: none;
+}
+
+%label {
+    font-variant: all-small-caps;
+    font-weight: bolder;
+    margin-right: 1rem;
+}

@@ -1,8 +1,11 @@
 @import "../settings/all";
+@import "button";
+@import "code";
+@import "forms";
 
 html {
     font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-feature-settings: 'tnum' 1, 'dlig' 1, 'zero' 1, 'frac' 1, 'cpsp' 1, 'ss01' 1, 'ss02' 1;
+    font-feature-settings: 'calt' 1, 'liga' 1, 'tnum' 1, 'dlig' 1, 'zero' 1,  'cpsp' 1, 'ss01' 1, 'ss02' 1;
     line-height: 1.4;
 }
 
@@ -16,16 +19,37 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-h1 {
-    font-family: 'Bungee Inline', cursive;
+h1, h2 {
+    text-shadow: 0 1px white, 0 2px lighten($accent-1, 10%);
+    small, a {
+        text-shadow: none;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: $dark-1;
-    font-weight: 500;
+    color: darken($accent-1, 20%);
+    font-family: $heading-fonts;
+    font-weight: 700;
     line-height: 1.2;
     margin-bottom: .5rem;
-    margin-top: 0;
+    position: relative;
+
+    small {
+        font-weight: 300;
+        display: block;
+    }
+
+    a {
+        color: darken($accent-1, 35%);
+
+        &:hover {
+            color: $light-1;
+        }
+    }
+}
+
+ins {
+    color: $light-1;
 }
 
 a,
@@ -40,7 +64,9 @@ abbr[title] {
   text-decoration: none;
 }
 
-
+dt {
+    @extend %label;
+}
 dl dt {
     font-weight: 700;
 }
@@ -58,111 +84,40 @@ sub {
     top: 0.1em; 
 }
 
-
-
-label {
-    font-weight: 500;
-}
-
-code[class] {
-    font-family: "Overpass Mono","SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
-    font-feature-settings: 'frac' 0;
-    font-size: 94%;
-    line-height: 1.2;
-}
-
-
-
 a {
-    color: $accent-1;
+    color: darken($accent-1, 25%);
 
     &:hover {
-        color: darken($accent-1, 20%);
+        color: darken($accent-1, 35%);
         cursor: crosshair;
     }
 }
 
-del {
-    color: $light-1;
+del, s {
+    color: $accent-1;
 }
 
 blockquote {
-    border-left: 3px $light-1 solid;
-    font-size: small;
+    border-left: .25em $light-1 solid;
+    font-size: .85em;
     margin-left: 0;
-    padding: 1em 2em;
+    padding: .5rem 1rem;
 }
 
-fieldset {
-    border: 2px $light-1 dotted;
-
-    legend {
-        color: $dark-1;
-        padding: 0 0.25rem;
-        font-weight: 700;
-        font-size: small;
-    }
+q {
+    color: $light-1;
 }
 
+dfn {
+    color: $light-y;
+}
 
 hr {
     border: 1px $light-1 solid;
 }
 
-
-code:not([class]), pre, kbd, samp, var {
-    background: lighten($light-1, 13%);
-    border: 1px darken($light-1, 13%) solid;
-    color: darken($light-1, 45%);
-    border-radius: 0.25em;
-    line-height: 1.2;
-    padding: .1rem .2rem;
-    font-family: "Overpass Mono","SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
-    font-feature-settings: 'frac' 0;
-    font-size: 94%;
-}
-
 mark {
-    background-color: $light-1;
-}
-
-input, textarea {
-    background-color: lighten($light-1, 15%);
-    border: 1px transparent solid;
-    border-bottom-color: $light-1;
-    height: 1.2rem;
-    line-height: 1.2rem;
-    font-size: 1rem;
-    padding: 0.25rem;
-    color: $dark-1;
-
-    &:focus, &:hover, &:active {
-        border: 1px $light-1 solid;
-    }
-}
-
-select {
-    border: 1px $light-1 solid;
-    font-size: 1rem;
-    padding: 0.25rem;
-    color: $dark-1;
-}
-
-button, input[type="submit"], input[type="reset"], input[type="button"] {
-    font-size: unset;
-    height: unset;
-    font-variant: all-small-caps;
-    font-weight: 700;
-    color: $dark-1;
-    background-color: $light-1;
-    border: 1px darken($light-1,15%) solid;
-    border-bottom-width: 3px;
-    border-radius: 0.3em;
-    padding: 0.1em 0.45em 0.15em;
-
-    &:hover {
-        background-color: lighten($light-1, 15%);
-    }
+    background-color: $light-y;
 }
 
 ul {
@@ -183,7 +138,6 @@ ul {
         }
 
         li {
-            
             &::before {
                 background-color: darken($light-1, 5%);
                 border-color: darken($light-1, 15%);
@@ -249,8 +203,8 @@ table {
     }
 
     caption {
-        font-weight: 700;
-        text-align: left;
+        @extend %label;
+        text-align: center;
         margin: 0 0.5rem;
 
         &::before {
@@ -269,12 +223,6 @@ tfoot td {
     border-top: 3px $light-1 solid;
 }
 
-thead th, 
-thead td,
-tfoot th, 
-tfoot td {
-    color: $dark-1;
-}
 tbody th {
     color: darken($light-1, 25%);
     font-size: small;
